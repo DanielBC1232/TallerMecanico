@@ -1,4 +1,8 @@
 /* Flujo */
+body {
+    background: #ffffff;
+  }
+
 .article-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 4 o 5 columnas por fila */
@@ -41,7 +45,7 @@
     .main{
         grid-area: main;
         background-color: #eaf4fc;
-        margin-right: 20px;
+
     }
 
     .footer{
@@ -53,11 +57,37 @@
     @media (min-width:992px){
         grid-template:
         "header header header" 55px
-        "navbar main main" auto
+        "main main" 100px
         "footer footer footer" 100px/
         0px auto 200px;
     }
 }
 
+.col-heigh {
+    height: 75vh;
+}
 
+.bg-card{
+    background-color: #edf3f7;
+}
 
+.card{
+    overflow: hidden;
+    width: 95%;
+    height: 90px;
+}
+
+.card p,h5{
+    margin: 0;
+    padding: 0;
+}
+
+.card hr{
+    margin: 3px;
+}
+
+.btn-card{
+    border: 0;
+    background: transparent;
+    border: none; 
+}
