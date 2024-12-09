@@ -5,7 +5,6 @@ body {
 
 footer {
   background-color: #d9e2e9;
-  padding: 25px 0;
   text-align: center;
 }
 
@@ -112,7 +111,6 @@ button:active {
   .footer {
     background-color: #d9e2e9;
     grid-area: footer;
-    padding: 2%;
   }
 
   @media (min-width: 992px) {
