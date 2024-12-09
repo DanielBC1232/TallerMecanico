@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Asistencia de Usuarios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovl+nee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .filters {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .filters div {
+            margin-bottom: 10px;
+        }
+        .filters label {
+            margin-right: 10px;
+        }
+        .filters input, .filters select {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        .filters button {
+            padding: 8px 15px;
+            background-color: #002a4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filters button:hover {
+            background-color: #002a4d;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #002a4d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Reporte de Asistencia de Usuarios</h1>
+
+    <!-- Filtros -->
+    <div class="filters">
+        <div>
+            <label for="role-select">Rol:</label>
+            <select id="role-select">
+                <option value="">Todos</option>
+                <option value="Admin">Admin</option>
+                <option value="Usuario">Usuario</option>
+            </select>
+
+            <label for="date-start">Fecha inicio:</label>
+            <input type="date" id="date-start">
+
+            <label for="date-end">Fecha fin:</label>
+            <input type="date" id="date-end">
+        </div>
+        <div>
+            <button onclick="exportar('xlsx')">Exportar a Excel</button>
+            <button onclick="exportar('pdf')">Exportar a PDF</button>
+        </div>
+    </div>
+
+    <!-- Tabla de reporte -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Fecha</th>
+                <th>Hora de Entrada</th>
+                <th>Hora de Salida</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datos de ejemplo -->
+            <tr>
+                <td>Juan Pérez</td>
+                <td>Admin</td>
+                <td>2024-12-07</td>
+                <td>08:00 AM</td>
+                <td>04:00 PM</td>
+                <td>Cumplió</td>
+            </tr>
+            <tr>
+                <td>María López</td>
+                <td>Usuario</td>
+                <td>2024-12-07</td>
+                <td>08:15 AM</td>
+                <td>03:50 PM</td>
+                <td>No cumplió</td>
+            </tr>
+            <tr>
+                <td>Pedro González</td>
+                <td>Usuario</td>
+                <td>2024-12-08</td>
+                <td>08:00 AM</td>
+                <td>04:00 PM</td>
+                <td>Cumplió</td>
+            </tr>
+            <tr>
+                <td>Laura Martínez</td>
+                <td>Admin</td>
+                <td>2024-12-09</td>
+                <td>08:10 AM</td>
+                <td>04:05 PM</td>
+                <td>No cumplió</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function exportar(formato) {
+        alert(`El reporte será exportado en formato ${formato.toUpperCase()}`);
+        // Aquí se implementa la lógica para exportar en Excel o PDF.
+    }
+</script>
+
+</body>
+</html>

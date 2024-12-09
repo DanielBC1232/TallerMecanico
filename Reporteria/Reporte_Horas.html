@@ -1,0 +1,173 @@
+_<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Horas de Trabajo e Ingresos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovl+nee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .filters {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .filters label {
+            margin-right: 10px;
+        }
+        .filters select, .filters input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        .filters button {
+            padding: 8px 15px;
+            background-color: #002a4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filters button:hover {
+            background-color: #002a4d;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #002a4d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Reporte de Horas de Trabajo e Ingresos</h1>
+    
+    <!-- Filtros -->
+    <div class="filters">
+        <div>
+            <label for="mechanic-select">Mecánico:</label>
+            <select id="mechanic-select">
+                <option value="">Todos</option>
+                <option value="Juan Pérez">Juan Pérez</option>
+                <option value="María López">María López</option>
+            </select>
+            
+            <label for="client-select">Cliente:</label>
+            <select id="client-select">
+                <option value="">Todos</option>
+                <option value="Cliente A">Cliente A</option>
+                <option value="Cliente B">Cliente B</option>
+            </select>
+        </div>
+        
+        <div>
+            <button onclick="exportar('xlsx')">Exportar a Excel</button>
+            <button onclick="exportar('pdf')">Exportar a PDF</button>
+        </div>
+    </div>
+    
+    <!-- Tabla de horas de trabajo -->
+    <h3>Horas de Trabajo por Mecánico</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Mecánico</th>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Horas Trabajadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datos de ejemplo -->
+            <tr>
+                <td>Juan Pérez</td>
+                <td>Cliente A</td>
+                <td>Pintura</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Juan Pérez</td>
+                <td>Cliente B</td>
+                <td>Cambio de pieza</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>María López</td>
+                <td>Cliente A</td>
+                <td>Pintura</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Tabla de ingresos -->
+    <h3>Ingresos por Servicio</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Servicio</th>
+                <th>Ingresos</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datos de ejemplo -->
+            <tr>
+                <td>Cliente A</td>
+                <td>Pintura</td>
+                <td>$300</td>
+                <td>2024-12-07</td>
+            </tr>
+            <tr>
+                <td>Cliente B</td>
+                <td>Cambio de pieza</td>
+                <td>$150</td>
+                <td>2024-12-10</td>
+            </tr>
+            <tr>
+                <td>Cliente A</td>
+                <td>Pintura</td>
+                <td>$280</td>
+                <td>2024-12-15</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function exportar(formato) {
+        alert(`El reporte será exportado en formato ${formato.toUpperCase()}`);
+        // Aquí se implementa la lógica para exportar en Excel o PDF.
+    }
+</script>
+
+</body>
+</html>
