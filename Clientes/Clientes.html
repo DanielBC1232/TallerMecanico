@@ -16,15 +16,10 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/gtr.css" />
     <link rel="stylesheet" href="/css/Clientes.css" />
-
-    
   </head>
   <body class="grid-container">
-
     <header class="header">
-      
       <nav class="navbar navbar-expand-sm bg-primary navbar-dark px-3">
-        
         <div class="container-fluid">
           <ul class="navbar-nav">
             <li>
@@ -46,7 +41,6 @@
             </li>
           </ul>
         </div>
-     
       </nav>
     </header>
 
@@ -83,7 +77,7 @@
           Agregar
         </button>
       </div>
-      <br>
+      <br />
       <div class="d-flex" style="justify-self: start">
         <button
           class="btn btn-primary px-5 text-white"
@@ -97,10 +91,9 @@
 
     <main class="main rounded-3 p-3">
       <!-- Contenedor de articulos -->
-       <h3>Clientes</h3>
+      <h3>Clientes</h3>
 
-    <div class="table-background-cli">
-
+      <div class="table-background-cli">
         <table class="table table-borderless table-hover">
           <thead>
             <tr>
@@ -183,16 +176,10 @@
                 </button>
               </td>
             </tr>
-            
           </tbody>
         </table>
-      
-    </div>
-
+      </div>
     </main>
-
-
-
 
     <!--MODAL  EDITAR-------------------------------------------------------------->
     <div class="modal" id="editModal">
@@ -310,8 +297,6 @@
                   style="width: 180%"
                 />
               </span>
-
-              
             </div>
 
             <div class="modal-footer my-4 d-flex justify-content-between">
@@ -334,7 +319,6 @@
       </div>
     </div>
 
-
     <!--AGREGAR MODALL----------------------------------------------------------------->
     <div class="modal" id="addModal">
       <div class="modal-dialog">
@@ -346,7 +330,6 @@
             <hr class="text-primary mx-2 border-2" />
 
             <div class="col-10 mx-auto d-flex flex-column gap-3">
-
               <span>
                 <span>Nombre Completo:</span>
                 <input
@@ -463,13 +446,7 @@
                   style="width: 180%"
                 />
               </span>
-            
-              
-             
-
-
-
-              </div>
+            </div>
 
             <div class="modal-footer my-4 d-flex justify-content-between">
               <button
@@ -490,64 +467,56 @@
     <!--Fin Modal -->
     <!------------------------------ Modal addModalClienteCorreo --------------------------------->
     <div class="modal" id="addModalClienteCorreo">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-heade"></div>
-  
-            <div class="modal-body">
-              <h3 class="text-primary text-center mt-1 mb-3">Nuevo Cliente</h3>
-              <hr class="text-primary mx-2 border-2" />
-  
-              <div class="col-10 mx-auto d-flex flex-column gap-3">
-  
-                <span>
-                    <span>Cliente:</span>
-                    <select id="selectCategory" class="form-select shadow-sm">
-                      <option value="todo">Todo</option>
-                      <option value="">Juan</option>
-                      <option value="">Pedro</option>
-                      <option value="">Carlos</option>
-                    </select>
-                  
-                  </span>
-  
-                <span>
-                  <span>Correo:</span>
-                  <input
-                    class="form-control border-1"
-                    type="email"
-                    placeholder="correoejemcliente@gmail.com"
-                    style="width: 180%"
-                  />
-                </span>
-  
-                <span>
-                  <span>Asunto:</span>
-                  <input
-                    class="form-control border-1"
-                    type="text"
-                    placeholder="Fecha"
-                    style="width: 180%"
-                  />
-                </span>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-heade"></div>
 
-                <span>
-                    <span>Urgencia:</span>
-                    <select id="selectCategory" class="form-select shadow-sm">
-                      <option value="todo">Todo</option>
-                      <option value="">Alta</option>
-                      <option value="">Media</option>
-                      <option value="">Baja</option>
-                      <option value="">informativa</option>
+          <div class="modal-body">
+            <h3 class="text-primary text-center mt-1 mb-3">Nuevo Cliente</h3>
+            <hr class="text-primary mx-2 border-2" />
 
-                    </select>
-                  
-                  </span>
-  
-             
-  
-                
-  
+            <div class="col-10 mx-auto d-flex flex-column gap-3">
+              <span>
+                <span>Cliente:</span>
+                <select id="selectCategory" class="form-select shadow-sm">
+                  <option value="todo">Todo</option>
+                  <option value="">Juan</option>
+                  <option value="">Pedro</option>
+                  <option value="">Carlos</option>
+                </select>
+              </span>
+
+              <span>
+                <span>Correo:</span>
+                <input
+                  class="form-control border-1"
+                  type="email"
+                  placeholder="correoejemcliente@gmail.com"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Asunto:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Fecha"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Urgencia:</span>
+                <select id="selectCategory" class="form-select shadow-sm">
+                  <option value="todo">Todo</option>
+                  <option value="">Alta</option>
+                  <option value="">Media</option>
+                  <option value="">Baja</option>
+                  <option value="">informativa</option>
+                </select>
+              </span>
+
               <div class="modal-footer my-4 d-flex justify-content-between">
                 <button
                   type="button"
@@ -564,8 +533,8 @@
           </div>
         </div>
       </div>
-    <!------------------------Fin Modal--------------------------------------------------->
-
+      <!------------------------Fin Modal--------------------------------------------------->
+    </div>
     <footer class="footer">
       <p>Derechos Reservados 2024 - Analisis y Modelado de Requerimientos</p>
     </footer>
