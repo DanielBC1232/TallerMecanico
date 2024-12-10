@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/scss/custom.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/gtr.css" />
+    <link rel="stylesheet" href="/css/Clientes.css" />
+
+    
+  </head>
+  <body class="grid-container">
+
+    <header class="header">
+      
+      <nav class="navbar navbar-expand-sm bg-primary navbar-dark px-3">
+        
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link active">LOGO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">option</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">option</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#" class="text-light">Logout</a>
+            </li>
+          </ul>
+        </div>
+     
+      </nav>
+    </header>
+
+    <nav class="sidebar p-5 rounded-3">
+      <!-- buscar -->
+
+      <div class="input-group mx-6 mt-2">
+        <input type="text" placeholder="Buscar Cliente" class="form-control" />
+        <button class="btn btn-secondary text-white" type="submit">
+          Buscar
+        </button>
+      </div>
+
+      <!-- filtros -->
+      <div class="my-5 row container">
+        <div class="col col-6">
+          <span for="selecCategory" class=""> <h6 class="">Filtrar:</h6></span>
+          <select id="selectCategory" class="form-select shadow-sm">
+            <option value="todo">Todo</option>
+            <option value="">Fecha</option>
+            <option value="">De mayor a menor tiempo activo</option>
+            <option value="">De menor a mayor tiempo activo</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Agregar -->
+      <div class="d-flex" style="justify-self: start">
+        <button
+          class="btn btn-primary px-5 text-white"
+          data-bs-toggle="modal"
+          data-bs-target="#addModal"
+        >
+          Agregar
+        </button>
+      </div>
+      <br>
+      <div class="d-flex" style="justify-self: start">
+        <button
+          class="btn btn-primary px-5 text-white"
+          data-bs-toggle="modal"
+          data-bs-target="#addModalClienteCorreo"
+        >
+          Enviar Correo/Notificar Cliente
+        </button>
+      </div>
+    </nav>
+
+    <main class="main rounded-3 p-3">
+      <!-- Contenedor de articulos -->
+       <h3>Clientes</h3>
+
+    <div class="table-background-cli">
+
+        <table class="table table-borderless table-hover">
+          <thead>
+            <tr>
+              <th>Nombre Completo</th>
+              <th>Cédula</th>
+              <th>Fecha de Ingreso</th>
+              <th>Email</th>
+              <th>Telefono</th>
+              <th>Direccion</th>
+              <th>Fecha ultima compra</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Fallas</td>
+              <td>1-1415-2242</td>
+              <td>1-2-2019</td>
+              <td>juan@gmail.com</td>
+              <td>+506 5768-8796</td>
+              <td>100mts de la iglesia</td>
+              <td>25-5-2022</td>
+              <td></td>
+              <td class="d-flex justify-content-center gap-3">
+                <button class="btn btn-danger text-white">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                <button
+                  class="btn btn-warning text-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#editModal"
+                >
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+              </td>
+            </tr>
+            <!-- objetos de la tabla-->
+            <tr>
+              <td>Pedro Vargas</td>
+              <td>1-1234-5467</td>
+              <td>2-2-2015</td>
+              <td>pedro@gmail.com</td>
+              <td>+506 8876-8796</td>
+              <td>200mts de la jugueteria patito</td>
+              <td>5-11-2024</td>
+              <td></td>
+              <td class="d-flex justify-content-center gap-3">
+                <button class="btn btn-danger text-white">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                <button
+                  class="btn btn-warning text-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#editModal"
+                >
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Carlos Perez</td>
+              <td>1-1239-5047</td>
+              <td>5-7-2011</td>
+              <td>Carlos@gmail.com</td>
+              <td>+506 4657-7564</td>
+              <td>100mts oeste escuala cartago</td>
+              <td>11-11-2024</td>
+              <td></td>
+              <td class="d-flex justify-content-center gap-3">
+                <button class="btn btn-danger text-white">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                <button
+                  class="btn btn-warning text-white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#editModal"
+                >
+                  <i class="fa-regular fa-pen-to-square"></i>
+                </button>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      
+    </div>
+
+    </main>
+
+
+
+
+    <!--MODAL  EDITAR-------------------------------------------------------------->
+    <div class="modal" id="editModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-heade"></div>
+
+          <div class="modal-body">
+            <h3 class="text-primary text-center mt-1 mb-3">Editar Cliente</h3>
+            <hr class="text-primary mx-2 border-2" />
+
+            <div class="col-10 mx-auto d-flex flex-column gap-3">
+              <span>
+                <span>Nombre Completo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Nombre"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Cedula:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Cédula"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Fecha de Ingreso:</span>
+                <input
+                  class="form-control border-1"
+                  type="date"
+                  placeholder="Fecha"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Correo Electronico:</span>
+                <input
+                  class="form-control border-1"
+                  type="email"
+                  placeholder="Email"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Dirección:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Dirección"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Fecha de ultima compra:</span>
+                <input
+                  class="form-control border-1"
+                  type="date"
+                  placeholder="Fecha Compra"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Marca de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Marca"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Color de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Color"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Modelo de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Modelo"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Kilometraje de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Km"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Servicio al Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Km"
+                  style="width: 180%"
+                />
+              </span>
+
+              
+            </div>
+
+            <div class="modal-footer my-4 d-flex justify-content-between">
+              <button
+                type="button"
+                class="btn btn-danger text-white"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button class="btn btn-dark rounded-3 text-white">
+                Generar Reporte
+              </button>
+              <button class="btn btn-success rounded-3 text-white">
+                Guardar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--AGREGAR MODALL----------------------------------------------------------------->
+    <div class="modal" id="addModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-heade"></div>
+
+          <div class="modal-body">
+            <h3 class="text-primary text-center mt-1 mb-3">Nuevo Cliente</h3>
+            <hr class="text-primary mx-2 border-2" />
+
+            <div class="col-10 mx-auto d-flex flex-column gap-3">
+
+              <span>
+                <span>Nombre Completo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Nombre"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Cedula:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Cédula"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Fecha de Ingreso:</span>
+                <input
+                  class="form-control border-1"
+                  type="date"
+                  placeholder="Fecha"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Correo Electronico:</span>
+                <input
+                  class="form-control border-1"
+                  type="email"
+                  placeholder="Email"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Dirección:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Dirección"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Fecha de ultima compra:</span>
+                <input
+                  class="form-control border-1"
+                  type="date"
+                  placeholder="Fecha Compra"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Fecha de ultima compra:</span>
+                <input
+                  class="form-control border-1"
+                  type="date"
+                  placeholder="Fecha Compra"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Marca de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Marca"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Color de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Color"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Modelo de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Modelo"
+                  style="width: 180%"
+                />
+              </span>
+              <span>
+                <span>Kilometraje de Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Km"
+                  style="width: 180%"
+                />
+              </span>
+
+              <span>
+                <span>Servicio al Vehiculo:</span>
+                <input
+                  class="form-control border-1"
+                  type="text"
+                  placeholder="Km"
+                  style="width: 180%"
+                />
+              </span>
+            
+              
+             
+
+
+
+              </div>
+
+            <div class="modal-footer my-4 d-flex justify-content-between">
+              <button
+                type="button"
+                class="btn btn-danger text-white"
+                data-bs-dismiss="modal"
+              >
+                Cancelar
+              </button>
+              <button class="btn btn-success rounded-3 text-white">
+                Guardar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin Modal -->
+    <!------------------------------ Modal addModalClienteCorreo --------------------------------->
+    <div class="modal" id="addModalClienteCorreo">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-heade"></div>
+  
+            <div class="modal-body">
+              <h3 class="text-primary text-center mt-1 mb-3">Nuevo Cliente</h3>
+              <hr class="text-primary mx-2 border-2" />
+  
+              <div class="col-10 mx-auto d-flex flex-column gap-3">
+  
+                <span>
+                    <span>Cliente:</span>
+                    <select id="selectCategory" class="form-select shadow-sm">
+                      <option value="todo">Todo</option>
+                      <option value="">Juan</option>
+                      <option value="">Pedro</option>
+                      <option value="">Carlos</option>
+                    </select>
+                  
+                  </span>
+  
+                <span>
+                  <span>Correo:</span>
+                  <input
+                    class="form-control border-1"
+                    type="email"
+                    placeholder="correoejemcliente@gmail.com"
+                    style="width: 180%"
+                  />
+                </span>
+  
+                <span>
+                  <span>Asunto:</span>
+                  <input
+                    class="form-control border-1"
+                    type="text"
+                    placeholder="Fecha"
+                    style="width: 180%"
+                  />
+                </span>
+
+                <span>
+                    <span>Urgencia:</span>
+                    <select id="selectCategory" class="form-select shadow-sm">
+                      <option value="todo">Todo</option>
+                      <option value="">Alta</option>
+                      <option value="">Media</option>
+                      <option value="">Baja</option>
+                      <option value="">informativa</option>
+
+                    </select>
+                  
+                  </span>
+  
+             
+  
+                
+  
+              <div class="modal-footer my-4 d-flex justify-content-between">
+                <button
+                  type="button"
+                  class="btn btn-danger text-white"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button class="btn btn-success rounded-3 text-white">
+                  Enviar Correo.
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!------------------------Fin Modal--------------------------------------------------->
+
+    <footer class="footer">
+      <p>Derechos Reservados 2024 - Analisis y Modelado de Requerimientos</p>
+    </footer>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
