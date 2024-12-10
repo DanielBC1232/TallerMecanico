@@ -117,7 +117,7 @@ button:active {
     grid-template:
       "header header header" 55px
       "navbar main main" auto
-      "footer footer footer" 100px/
+      "footer footer footer" auto/
       400px auto 200px;
   }
 
