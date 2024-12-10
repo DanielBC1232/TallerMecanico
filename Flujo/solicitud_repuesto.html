@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Repuestos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #002a4d;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form textarea, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #005f73;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0a9396;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .secondary-button {
+            background-color: #94d2bd;
+            color: #005f73;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            padding: 5px 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+        .secondary-button:hover {
+            background-color: #76c8b2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Generar Solicitud de Repuestos</h1>
+        <p>Solicite los repuestos necesarios para mejorar las reparaciones en curso o futuras</p>
+    </header>
+
+    <!-- Formulario con botones adicionales -->
+    <form action="confirmacion.html" method="GET">
+        <label for="nombre">Nombre del Empleado</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+        <label for="departamento">Departamento</label>
+        <input type="text" id="departamento" name="departamento" placeholder="Ingrese su departamento" required>
+
+        <label for="repuestos">Lista de Repuestos Solicitados</label>
+        <textarea id="repuestos" name="repuestos" placeholder="Describa los repuestos que necesita" rows="5" required></textarea>
+
+        <label for="prioridad">Prioridad</label>
+        <select id="prioridad" name="prioridad">
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+
+        <label for="justificacion">Justificación</label>
+        <textarea id="justificacion" name="justificacion" placeholder="Explique por qué se necesitan estos repuestos" rows="5" required></textarea>
+
+        <div class="action-buttons">
+            <button type="submit">Enviar Solicitud</button>
+            <a href="ver_solicitudes.html" class="secondary-button">Ver Solicitudes</a>
+        </div>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Departamento de Repuestos</p>
+    </footer>
+</body>
+</html>
+
+

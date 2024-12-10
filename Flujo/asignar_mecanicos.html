@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Mecánicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #002a4d;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        form input, form textarea, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #005f73;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0a9396;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Asignación de Mecánicos y Gestión de Reparaciones</h1>
+        <p>Gestione el flujo de trabajo de los vehículos de manera eficiente</p>
+    </header>
+
+    <form action="confirmar_asignacion.html" method="POST">
+        <h2>Asignar Mecánico</h2>
+
+        <label for="vehiculo">Vehículo en Reparación</label>
+        <select id="vehiculo" name="vehiculo" required>
+            <option value="">Seleccione un vehículo</option>
+            <option value="vehiculo1">Vehículo 1</option>
+            <option value="vehiculo2">Vehículo 2</option>
+            <option value="vehiculo3">Vehículo 3</option>
+        </select>
+
+        <label for="mecanico">Mecánico</label>
+        <select id="mecanico" name="mecanico" required>
+            <option value="">Seleccione un mecánico</option>
+            <option value="mecanico1">Mecánico 1</option>
+            <option value="mecanico2">Mecánico 2</option>
+            <option value="mecanico3">Mecánico 3</option>
+        </select>
+
+        <label for="estado_inicial">Estado Inicial del Vehículo</label>
+        <textarea id="estado_inicial" name="estado_inicial" placeholder="Describa el estado en que se recibe el vehículo" rows="4" required></textarea>
+
+        <h2>Registrar Cambios de Estado</h2>
+
+        <label for="estado_cambio">Nuevo Estado</label>
+        <input type="text" id="estado_cambio" name="estado_cambio" placeholder="Ingrese el nuevo estado" required>
+
+        <label for="tipo_cambio">Tipo de Cambio</label>
+        <input type="text" id="tipo_cambio" name="tipo_cambio" placeholder="Describa el tipo de cambio realizado" required>
+
+        <label for="costo_parte">Costo de las Partes Reemplazadas</label>
+        <input type="number" id="costo_parte" name="costo_parte" placeholder="Ingrese el costo en colones" required>
+
+        <h2>Finalizar Reparación</h2>
+
+        <label for="costo_total">Costo Total de la Reparación</label>
+        <input type="number" id="costo_total" name="costo_total" placeholder="Ingrese el costo total en colones" required>
+
+        <button type="submit">Marcar como Listo para Entrega</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Departamento de Mantenimiento</p>
+    </footer>
+</body>
+</html>
